@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/api/tarsasjatekok/all', [TarsasjatekController::class, 'all']);  //összes t.játék megjel.
 Route::get('/api/tarsasjatekok', [TarsasjatekController::class, 'index']);  //összes t.játék megjel.
 Route::get('/api/tarsasjatek/{id}', [TarsasjatekController::class, 'show']); //adott id-jú t.játék megjelenítése
 Route::post('/api/tarsasjatek', [TarsasjatekController::class, 'store']); //új rekord létrehozása request alapján

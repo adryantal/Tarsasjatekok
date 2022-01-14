@@ -29,6 +29,12 @@ class TarsasjatekController extends Controller
         //
     }
 
+
+    public function all()
+    {
+        return response()->json(Tarsasjatek::all());
+    }
+
     /**
      * Store a newly created resource in storage.
      *
